@@ -1,0 +1,21 @@
+<head>
+  <title>kite_calc</title>
+</head>
+
+<body>
+  <h1>calculate how much materials you might need for your tetrahedral kite!</h1>
+
+  {{> calculate}}
+
+</body>
+
+<template name="calculate">
+  <form>
+    <input type="number" name="layer_numbers" max="999" min="1" step="1"/> 
+    <input type="submit" value="Submit Form"/>
+  </form>
+  <p>there will be {{module_num}} modules</p>
+  <p>and you will need {{rod_num}} rods</p>
+  <p>and {{connector_num}} connectors</p>
+</template>
+
