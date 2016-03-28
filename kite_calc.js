@@ -1,15 +1,19 @@
+layer_dump = new Mongo.Collection('layers');
+
 if (Meteor.isClient) {
-  Template.calculate.events({
-    'submit form': function (event, template) {
+  Template.body.events({
+    'submit .ask': function (event) {
       // calculating for the 
-      var num_layer = event.target.layer_numbers.value;
-      session.set('num_layer', num_layer)
+      var num_layer = event.target.layer.value;
+      console.log(event)
       console.log(num_layer)
+      layer_dump.insert({
+        layers : num_layer
+      })
     }
   });
-  Template.calculate.helpers({
-    var layer = session.get(numlayer)
-    
+  Template.body.helpers({
+    module_num: layers
   });
 }
 

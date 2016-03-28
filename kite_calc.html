@@ -7,15 +7,16 @@
 
   {{> calculate}}
 
-</body>
-
-<template name="calculate">
-  <form>
-    <input type="number" name="layer_numbers" max="999" min="1" step="1"/> 
-    <input type="submit" value="Submit Form"/>
-  </form>
   <p>there will be {{module_num}} modules</p>
   <p>and you will need {{rod_num}} rods</p>
   <p>and {{connector_num}} connectors</p>
+
+</body>
+
+<template name="calculate">
+  <form class="ask">
+    <input type="number" name="layer" max="999" min="1" step="1"/> 
+    <input type="submit" value="Submit Form"/>
+  </form>
 </template>
 
